@@ -8,15 +8,11 @@ public:
                 count++;
             }
             if(nums[i]!=1){
-                if(pc<count){
-                    pc=count;
-                }
+                pc=max(count,pc);
                 count=0;
             }
         }
-        if(pc<count){
-            pc=count;
-        }
+        pc=max(count,pc);
         return pc;
     }
 };
